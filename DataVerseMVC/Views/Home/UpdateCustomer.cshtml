@@ -1,0 +1,40 @@
+﻿@model DataVerseMVC.Models.CustomerOptionModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container-fluid" style="margin:100px 200px 100px 200px; padding: 50px; border-radius: 15px 50px; width:60%;background-color:white">
+    <h3 style="text-align:center;padding-top:20px"> Edit Your Profile </h3>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Id</b></label>
+            <input type="text" class="form-control" id="Id" value="@Model.customer.Id" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b>FirstName</b></label>
+            <input type="text" class="form-control" id="FirstName" value="@Model.customer.FirstName">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b>LastName</b></label>
+            <input type="text" class="form-control" id="LastName" value="@Model.customer.LastName">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Email</b></label>
+            <input type="text" class="form-control" id="Email" value="@Model.customer.Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Address</b></label>
+            <input type="text" class="form-control" id="Address" value="@Model.customer.Address">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Telephone</b></label>
+            <input type="text" class="form-control" id="Telephone" value="@Model.customer.Telephone">
+        </div>
+
+        <button type="button" class="btn btn-outline-info btn-block updateCustomer" style="width:200px">Update</button>
+
+
+    </form>
+</div>

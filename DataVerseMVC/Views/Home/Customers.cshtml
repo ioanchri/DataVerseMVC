@@ -1,0 +1,42 @@
+﻿
+@model DataVerseMVC.Models.CustomerModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+    <hr />
+    <h2 style="text-align:left">Customers</h2>
+    <hr />
+    <div class="row">
+        @{
+            foreach (var customer in Model.Customers)
+            {
+
+                <div class="col-md-3">
+                    <div class="card" >
+
+                        <p><b>FirstName: </b>@customer.FirstName</p>
+                        <p><b>LastName: </b>@customer.LastName</p>
+                        <p><b>Email: </b>@customer.Email</p>
+                        <p><b>Address: </b>@customer.Address</p>
+                        <p><b>Telephone: </b>@customer.Telephone</p>
+                        <div class="row>">
+                            <a href="~/home/updatecustomer/@customer.Id"><button id="update-customer-profile" type="button" class="btn btn-outline-info" >Edit</button></a>
+                            <a href="~/home/DeleteCustomerFromList/@customer.Id"><button type="button" class="btn btn-outline-info" onclick="return confirm('Are you sure you want to delete @customer.FirstName @customer.LastName ?');">Delete</button></a>
+                        </div>
+                    </div>
+                </div>               
+
+            }
+
+
+        }
+
+    </div>
+
+    <hr />
+    To add a new customer press <a href="~/home/addcustomer">here</a>
+    <hr />
